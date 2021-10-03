@@ -9,6 +9,7 @@
     "test": "ng test --watch=false --code-coverage",
     "lint": "ng lint",
     "doc": "npx compodoc -s -p tsconfig.doc.json",
+    "analyse": "ng build --stats-json; npx webpack-bundle-analyzer dist/starter/stats.json",
     "doc:gen": "./node_modules/.bin/compodoc -p tsconfig.doc.json"
   },
   "author": {
