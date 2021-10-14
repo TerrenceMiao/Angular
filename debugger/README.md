@@ -26,6 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Debugging unit tests in VS Code
+
+- Select `Run and Debug` in Toolbar, then select `Attach to Karma (debugger)` in drop-down list, then click GREEN run button or F5 key (Start Debuggin).
+- Set breakpoint in Angular Unit Test code, then open a Termail Window and run `npm run test`.
+- Enjoy debugging Angular source code in VS Code.
+
 # References
 
 - Debug Angular 12 Karma Tests in VSCode, https://medium.com/nextfaze/debug-angular-10-karma-tests-in-vscode-9685b0565e8
