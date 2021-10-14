@@ -29,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Debugging unit tests in VS Code
 
 - Select `Run and Debug` in Toolbar, then select `Attach to Karma (debugger)` in drop-down list, then click GREEN run button or F5 key (Start Debuggin).
-- Set breakpoint in Angular Unit Test code, then open a Termail Window and run `npm run test`.
+- Set breakpoint in Angular Unit Test code, then open a Termail Window and run `ng test`, or `ng test --include src/app/app.component.spec.ts`, or `npm run test`.
 - Enjoy debugging Angular source code in VS Code.
 
 # References
