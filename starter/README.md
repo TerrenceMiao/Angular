@@ -43,3 +43,8 @@ in your browser go to [http://localhost:4200](http://localhost:4200)
 
 ## Tests prerequisites
 * ChromeDriver only supports Chrome version 89
+
+# References
+* Angular HTTP GET Example using httpclient, https://www.tektutorialshub.com/angular/angular-http-get-example-using-httpclient/
+* Angular examples, https://github.com/angular/angular/tree/master/aio/content/examples
+* GitHub GraphQL API, https://docs.github.com/en/graphql
