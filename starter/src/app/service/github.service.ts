@@ -6,10 +6,10 @@ import { map, catchError, tap} from 'rxjs/operators';
 
 import { GitHubRepository } from '../model/github.repository';
 
+import { environment } from '../../environments/environment';
+
 @Injectable()
 export class GitHubService {
-
-  baseURL: string = "https://api.github.com/";
 
   constructor(private http: HttpClient) {
   }
@@ -17,9 +17,9 @@ export class GitHubService {
   getRepos(username: string): Observable<GitHubRepository[]> {
     // The https://api.github.com/users/<username>?repos endpoint returns the list of
     // Repositories belonging to the user <userName>
-    // return this.http.get<repos[]>(this.baseURL + 'users/' + userName + '/repos', { observe: 'events', reportProgress: true })
-    // return this.http.get<repos[]>(this.baseURL + 'users/' + userName + '/repos', { observe: 'response' })
-    return this.http.get<GitHubRepository[]>(this.baseURL + 'users/' + username + '/repos')
+    // return this.http.get<repos[]>(`${environment.gitHubApi}/users/` + userName + '/repos', { observe: 'events', reportProgress: true })
+    // return this.http.get<repos[]>(`${environment.gitHubApi}/users/` + userName + '/repos', { observe: 'response' })
+    return this.http.get<GitHubRepository[]>(`${environment.gitHubApi}/users/` + username + '/repos')
       .pipe(
         map((data) => {
           return data;

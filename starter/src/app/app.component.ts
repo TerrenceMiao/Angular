@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { GitHubService } from './service/github.service';
 import { GitHubRepository } from './model/github.repository';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
