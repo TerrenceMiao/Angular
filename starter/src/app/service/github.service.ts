@@ -41,7 +41,8 @@ export class GitHubService {
   private handleError<T>(operation = 'operation') {
     return (error: HttpErrorResponse): Observable<T> => {
       console.error(error);
-      const message = (error.error instanceof ErrorEvent) ? error.error.message : `server returned code ${error.status} with body "${error.error}"`;
+      const message = (error.error instanceof ErrorEvent) ?
+        error.error.message : `server returned code ${error.status} with body "${error.error}"`;
       throw new Error(`${operation} failed: ${message}`);
     };
   }

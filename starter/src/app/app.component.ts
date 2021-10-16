@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { GitHubService } from './service/github.service';
 import { GitHubRepository } from './model/github.repository';
@@ -8,7 +8,7 @@ import { GitHubRepository } from './model/github.repository';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   title = 'starter';
 
