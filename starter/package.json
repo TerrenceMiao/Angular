@@ -3,7 +3,7 @@
   "version": "12.2.8",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"npm run server\" \"npm run mock\"",
+    "start": "concurrently --kill-others \"yarn server\" \"yarn mock\"",
     "server": "ng serve --proxy-config proxy.conf.json --port 4200",
     "mock": "json-server mock/db.json --routes mock/routes.json --no-cors=true",
     "build": "ng lint && ng test --watch=false --code-coverage && ng build",
