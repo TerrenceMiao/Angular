@@ -1,5 +1,4 @@
 import { HttpErrorResponse } from "@angular/common/http";
-import { defer } from "rxjs";
 import { GitHubRepository } from "../model/github.repository";
 import { asyncData, asyncError } from "../testing/async-observable-helpers";
 import { GitHubService } from "./github.service";
