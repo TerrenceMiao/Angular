@@ -47,4 +47,13 @@ in your browser go to [http://localhost:4200](http://localhost:4200)
 # References
 * Angular HTTP GET Example using httpclient, https://www.tektutorialshub.com/angular/angular-http-get-example-using-httpclient/
 * Angular examples, https://github.com/angular/angular/tree/master/aio/content/examples
-* GitHub GraphQL API, https://docs.github.com/en/graphql
+* GitHub GraphQL API, https://api.github.com/graphql
+* GitHub GraphQL API Document, https://docs.github.com/en/graphql
+
+![GraphQL example](img/GraphQL%20example.png "GraphQL example")
+
+* GraphQL Playground, https://github.com/graphql/graphql-playground
+
+![GraphQL GitHub](img/GraphQL%20GitHub.png "GraphQL GitHub")
+
+* Introduction to GraphQL with GitHub API - Understand the main advantages of GraphQL exploring the GitHub API, https://medium.com/swlh/introduction-to-graphql-with-github-api-64ee8bb11630
