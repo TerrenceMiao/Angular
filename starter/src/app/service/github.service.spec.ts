@@ -1,10 +1,9 @@
-import { HttpErrorResponse } from "@angular/common/http";
-import { GitHubRepository } from "../model/github.repository";
-import { asyncData, asyncError } from "../testing/async-observable-helpers";
-import { GitHubService } from "./github.service";
+import { HttpErrorResponse } from '@angular/common/http';
+import { GitHubRepository } from '../model/github.repository';
+import { asyncData, asyncError } from '../testing/async-observable-helpers';
+import { GitHubService } from './github.service';
 
 describe('GitHubService', () => {
-
   let httpClientSpy: { get: jasmine.Spy };
   let gitHubService: GitHubService;
   let userName = 'me';
@@ -22,19 +21,14 @@ describe('GitHubService', () => {
 
     httpClientSpy.get.and.returnValue(asyncData(expectedGitHubRepositories));
 
-    gitHubService.getRepos(userName).subscribe(
-      gitHubRepositories => {
-        expect(gitHubRepositories)
-          .withContext('GitHubRepositories doesnt match ' + expectedGitHubRepositories)
-          .toEqual(expectedGitHubRepositories);
-        done();
-      },
-      done.fail,
-    );
+    gitHubService.getRepos(userName).subscribe((gitHubRepositories) => {
+      expect(gitHubRepositories)
+        .withContext('GitHubRepositories doesnt match ' + expectedGitHubRepositories)
+        .toEqual(expectedGitHubRepositories);
+      done();
+    }, done.fail);
 
-    expect(httpClientSpy.get.calls.count())
-      .withContext('Should make one call')
-      .toBe(1);
+    expect(httpClientSpy.get.calls.count()).withContext('Should make one call').toBe(1);
   });
 
   it('should return an error when the server returns a 404', (done: DoneFn) => {
@@ -47,12 +41,11 @@ describe('GitHubService', () => {
     httpClientSpy.get.and.returnValue(asyncError(errorResponse));
 
     gitHubService.getRepos(userName).subscribe(
-      gitHubRepositories => done.fail('expected an error, not gitHubRepositories'),
-      error  => {
+      (gitHubRepositories) => done.fail('expected an error, not gitHubRepositories'),
+      (error) => {
         expect(error.message).toContain('test 404 error');
         done();
       },
     );
   });
-})
-
+});

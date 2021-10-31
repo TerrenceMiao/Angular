@@ -6,7 +6,6 @@ import { GitHubService } from './service/github.service';
 import { asyncData } from './testing/async-observable-helpers';
 
 describe('AppComponent', () => {
-
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
 
@@ -17,12 +16,8 @@ describe('AppComponent', () => {
     getReposSpy = gitHubService.getRepos.and.returnValue(asyncData([new GitHubRepository()]));
 
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-      imports: [
-        FormsModule,
-      ],
+      declarations: [AppComponent],
+      imports: [FormsModule],
       providers: [
         {
           provide: GitHubService,
@@ -51,6 +46,6 @@ describe('AppComponent', () => {
 
   it('should invoke getRepos()', () => {
     fixture.detectChanges();
-    expect(getReposSpy.calls.any()).withContext( 'getRepos() should be called').toBe(true);
+    expect(getReposSpy.calls.any()).withContext('getRepos() should be called').toBe(true);
   });
 });
