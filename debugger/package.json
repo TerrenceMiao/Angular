@@ -9,8 +9,7 @@
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "prettier": "prettier --write 'src/**/*.{ts,html}'",
-    "prepare": "cd .. && husky install debugger/.husky"
+    "prettier": "prettier --write 'src/**/*.{ts,html}'"
   },
   "private": true,
   "dependencies": {
